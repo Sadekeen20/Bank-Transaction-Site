@@ -79,23 +79,11 @@
             
             const depositNumber=getInputNumber('depositAmount');
 
-            // const depositAmount=document.getElementById('depositAmount').value;
-            // const depositNumber=parseFloat(depositAmount);
-            
-            // const currentDeposit=document.getElementById('currentDeposit').innerText;
-            // const currentDepositNumber=parseFloat(currentDeposit);
-            // const totalDeposit=depositNumber+currentDepositNumber;
            
-            // document.getElementById('currentDeposit').innerText=totalDeposit;
-            // document.getElementById('depositAmount').value="";
-
             updateSpanText('currentDeposit',depositNumber);
             document.getElementById('depositAmount').value="";
 
-            // const currentBalance=document.getElementById('currentBalance').innerText;
-            // const currentBalanceNumber =parseFloat(currentBalance);
-            // const totalBalance=depositNumber+currentBalanceNumber;
-            // document.getElementById('currentBalance').innerText=totalBalance;
+           
             updateSpanText('currentBalance',depositNumber);
 
 
@@ -103,8 +91,7 @@
         //withdraw event handler
         const withDrawBtn=document.getElementById('addWithdraw');
         withDrawBtn.addEventListener('click',function(){
-            // const withdrawAmount=document.getElementById('withdrawAmount').value;
-            // const withdrawAmount=parseFloat(withdrawAmount);
+            
             const withdrawNumber=getInputNumber('withdrawAmount');
             updateSpanText('currentWithdraw',withdrawNumber);
             updateSpanText('currentBalance',-1*withdrawNumber);
